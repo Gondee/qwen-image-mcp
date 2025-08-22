@@ -115,6 +115,10 @@ By default, images are saved to:
 - RAM: 32GB
 - Storage: 50GB free space (for model and generated images)
 
+## ⚙️ Auto-Start Configuration
+
+The MCP server starts automatically when Claude Code launches after registration. For additional auto-start options or system-service configuration, see [AUTOSTART.md](AUTOSTART.md).
+
 ## 🔧 Troubleshooting
 
 ### Server not connecting
