@@ -19,6 +19,10 @@ A Model Context Protocol (MCP) server that enables Claude Code to generate image
 - 20GB free disk space for model download (first run only)
 - Recommended: GPU with 8GB+ VRAM (works on CPU but slower)
 
+### ⚠️ Important: Automatic Model Download
+
+**The Qwen-Image model (~20GB) will download automatically on your first image generation.** This is a one-time download that will be cached for all future use. The first image generation will take 5-15 minutes depending on your internet speed. Subsequent generations will only take 30-60 seconds.
+
 ### Installation
 
 1. **Clone the repository:**
@@ -134,7 +138,11 @@ claude mcp add --scope user qwen-image python /path/to/server.py
 - Try reinstalling: `pip install --upgrade diffusers transformers`
 
 ### First run is slow
-The first generation downloads the 20GB model. Subsequent runs use the cached model.
+- **This is normal!** The model downloads automatically on first use
+- Download size: ~20GB (one-time only)
+- First generation: 5-15 minutes (includes download)
+- Future generations: 30-60 seconds (uses cached model)
+- Download location: `~/.cache/huggingface/hub/` (or `HF_HOME` if set)
 
 ## 🤝 Contributing
 
