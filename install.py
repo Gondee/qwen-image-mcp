@@ -13,7 +13,7 @@ import shutil
 
 def get_server_command():
     """Get the appropriate command to run the server."""
-    server_path = Path(__file__).parent / "server.py"
+    server_path = Path(__file__).parent / "qwen_image_mcp" / "server.py"
     python_cmd = sys.executable
     return [python_cmd, str(server_path)]
 
@@ -32,7 +32,7 @@ def register_with_claude():
     
     print("\n📝 Registering Qwen-Image MCP server with Claude Code...")
     
-    server_path = Path(__file__).parent / "server.py"
+    server_path = Path(__file__).parent / "qwen_image_mcp" / "server.py"
     python_cmd = sys.executable
     
     # Build the claude mcp add command
@@ -105,7 +105,7 @@ def main():
     else:
         print("\n⚠️  Automatic registration failed.")
         print("\nManual registration:")
-        server_path = Path(__file__).parent / "server.py"
+        server_path = Path(__file__).parent / "qwen_image_mcp" / "server.py"
         print(f"  claude mcp add --scope user qwen-image {sys.executable} -- {server_path}")
     
     # Print usage information

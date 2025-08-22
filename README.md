@@ -23,7 +23,34 @@ A Model Context Protocol (MCP) server that enables Claude Code to generate image
 
 **The Qwen-Image model (~20GB) will download automatically on your first image generation.** This is a one-time download that will be cached for all future use. The first image generation will take 5-15 minutes depending on your internet speed. Subsequent generations will only take 30-60 seconds.
 
-### Installation
+## 🎯 Installation Options
+
+### Option 1: One-Line Install with uvx (Simplest)
+
+```bash
+# Install and register with Claude Code in one command
+uvx --from git+https://github.com/yourusername/qwen-image-mcp.git qwen-image-mcp-register
+
+# Or with pipx
+pipx run --spec git+https://github.com/yourusername/qwen-image-mcp.git qwen-image-mcp-register
+```
+
+That's it! Restart Claude Code and start generating images.
+
+### Option 2: Install with pip/uv
+
+```bash
+# Using uv
+uv pip install git+https://github.com/yourusername/qwen-image-mcp.git
+
+# Or using pip
+pip install git+https://github.com/yourusername/qwen-image-mcp.git
+
+# Then register with Claude Code
+qwen-image-mcp-register
+```
+
+### Option 3: Clone and Install
 
 1. **Clone the repository:**
 ```bash
@@ -36,26 +63,19 @@ cd qwen-image-mcp
 python install.py
 ```
 
-This will:
-- Install all required dependencies
-- Register the server with Claude Code
-- Provide usage instructions
+### Option 4: Manual Registration
 
-### Manual Installation
+If automatic registration doesn't work:
 
-If the automatic installer doesn't work:
-
-1. **Install dependencies:**
 ```bash
-pip install -r requirements.txt
+# Find where the server is installed
+python -c "import qwen_image_mcp; print(qwen_image_mcp.__file__)"
+
+# Register with Claude Code (adjust path from above)
+claude mcp add --scope user qwen-image python /path/to/qwen_image_mcp/server.py
 ```
 
-2. **Register with Claude Code:**
-```bash
-claude mcp add --scope user qwen-image python /path/to/server.py
-```
-
-3. **Restart Claude Code or run `/mcp` command**
+After any installation method, restart Claude Code or run `/mcp` command.
 
 ## 💬 Usage in Claude Code
 

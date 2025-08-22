@@ -7,7 +7,7 @@ echo ======================================
 
 REM Get the directory where this script is located
 set SCRIPT_DIR=%~dp0
-set SERVER_PATH=%SCRIPT_DIR%server.py
+set SERVER_PATH=%SCRIPT_DIR%qwen_image_mcp\server.py
 
 REM Find Python executable
 where python >nul 2>&1

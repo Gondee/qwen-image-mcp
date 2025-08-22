@@ -9,7 +9,7 @@ echo "======================================"
 
 # Get the directory where this script is located
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-SERVER_PATH="$SCRIPT_DIR/server.py"
+SERVER_PATH="$SCRIPT_DIR/qwen_image_mcp/server.py"
 
 # Find Python executable
 if command -v python3 &> /dev/null; then
