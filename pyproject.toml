@@ -36,8 +36,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/qwen-image-mcp"
-Issues = "https://github.com/yourusername/qwen-image-mcp/issues"
+Homepage = "https://github.com/Gondee/qwen-image-mcp"
+Issues = "https://github.com/Gondee/qwen-image-mcp/issues"
 
 [project.scripts]
 qwen-image-mcp = "qwen_image_mcp:main"

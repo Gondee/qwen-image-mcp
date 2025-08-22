@@ -2,6 +2,14 @@
 
 A Model Context Protocol (MCP) server that enables Claude Code to generate images locally using the state-of-the-art Qwen-Image model.
 
+## 🚀 One-Line Install
+
+```bash
+uvx --from git+https://github.com/Gondee/qwen-image-mcp.git qwen-image-mcp-register
+```
+
+That's it! Restart Claude Code and start generating images locally.
+
 ## ✨ Features
 
 - **Local Generation**: Run entirely on your machine - no API keys or cloud services required
@@ -29,10 +37,10 @@ A Model Context Protocol (MCP) server that enables Claude Code to generate image
 
 ```bash
 # Install and register with Claude Code in one command
-uvx --from git+https://github.com/yourusername/qwen-image-mcp.git qwen-image-mcp-register
+uvx --from git+https://github.com/Gondee/qwen-image-mcp.git qwen-image-mcp-register
 
 # Or with pipx
-pipx run --spec git+https://github.com/yourusername/qwen-image-mcp.git qwen-image-mcp-register
+pipx run --spec git+https://github.com/Gondee/qwen-image-mcp.git qwen-image-mcp-register
 ```
 
 That's it! Restart Claude Code and start generating images.
@@ -41,10 +49,10 @@ That's it! Restart Claude Code and start generating images.
 
 ```bash
 # Using uv
-uv pip install git+https://github.com/yourusername/qwen-image-mcp.git
+uv pip install git+https://github.com/Gondee/qwen-image-mcp.git
 
 # Or using pip
-pip install git+https://github.com/yourusername/qwen-image-mcp.git
+pip install git+https://github.com/Gondee/qwen-image-mcp.git
 
 # Then register with Claude Code
 qwen-image-mcp-register
@@ -54,7 +62,7 @@ qwen-image-mcp-register
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/yourusername/qwen-image-mcp.git
+git clone https://github.com/Gondee/qwen-image-mcp.git
 cd qwen-image-mcp
 ```
 
